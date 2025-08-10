@@ -9,7 +9,7 @@ cores = {
     }
 
 print(f"""{cores['negrito']}Você deseja calcular as coordenadas de qual mundo?{cores['reset']}
-{cores['negrito']} [ 0 ] {cores['negrito']} {cores['vermelho']}NETHER{cores['reset']} para o {cores['azulclaro']}OVERWORLD{cores['reset']}
+{cores['negrito']} [ 0 ] {cores['reset']} {cores['vermelho']}NETHER{cores['reset']} para o {cores['azulclaro']}OVERWORLD{cores['reset']}
 {cores['negrito']} [ 1 ] {cores['reset']} {cores['azulclaro']}OVERWORLD{cores['reset']} para o {cores['vermelho']}NETHER{cores['reset']}""")
 opcao = int(input(f"{cores['negrito']}>> Faça sua escolha: "))
 
@@ -25,6 +25,7 @@ while True:
             n2 = int(input(f"{cores['negrito']}Digite a segunda coordenada: {cores['amarelo']}(Z){cores['reset']} "))
             x = n1 * 8
             z = n2 * 8
+            print(f"As coordenadas no {cores['azulclaro']}Overworld{cores['reset']} serão:")
             print(f"{cores['verde']}X: {x:,}{cores['reset']}".replace(",", "."))
             print(f"{cores['amarelo']}Z: {z:,}{cores['reset']}".replace(",", "."))
         except ValueError:
@@ -50,6 +51,7 @@ while True:
             n2 = int(input(f"{cores['negrito']}Digite a segunda coordenada: {cores['amarelo']}(Z){cores['reset']} "))
             x = n1 // 8
             z = n2 // 8
+            print(f"As coordenadas no {cores['vermelho']}Nether{cores['reset']} serão:")
             print(f"{cores['verde']}X: {x:,}{cores['reset']}".replace(",", "."))
             print(f"{cores['amarelo']}Z: {z:,}{cores['reset']}".replace(",", "."))
         except ValueError:
